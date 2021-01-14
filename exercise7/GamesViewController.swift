@@ -48,8 +48,7 @@ class GamesViewController: UIViewController
 
     @objc private func goBackButton()
     {
-        self.navigationController?.popViewController(animated: true)
-
+        dismiss(animated: true)
     }
 }
 

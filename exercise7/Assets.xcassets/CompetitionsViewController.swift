@@ -74,8 +74,12 @@ extension CompetitionsViewController: UITableViewDelegate
         }
 
         let vc: GamesViewController = GamesViewController(sectionTitle: leagueName)
+        let navVC: UINavigationController = UINavigationController(rootViewController: vc)
+        navVC.modalPresentationStyle = .fullScreen
 
-        self.navigationController?.pushViewController(vc, animated: true)
+        present(navVC, animated: true)
+
+//        self.navigationController?.pushViewController(vc, animated: true)
 
     }
 
