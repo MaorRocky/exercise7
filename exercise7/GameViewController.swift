@@ -15,7 +15,7 @@ class GameViewController: UIViewController
 
         self.view.backgroundColor = .white
 
-        let label = UILabel()
+        let label: UILabel = UILabel()
         label.backgroundColor = UIColor.clear
         label.numberOfLines = 0
         label.textAlignment = .center
@@ -41,14 +41,14 @@ class GameViewController: UIViewController
 
         myView.backgroundColor = .white
 
-        let scoreView = UIView() // the view for the score
+        let scoreView: UIView = UIView() // the view for the score
 
         myView.addSubview(scoreView)
 
         scoreView.translatesAutoresizingMaskIntoConstraints = false
         scoreView.center(to: myView)
 
-        let scoreLabel = UILabel()
+        let scoreLabel: UILabel = UILabel()
         scoreLabel.text = "0-0"
         scoreLabel.font = .systemFont(ofSize: 40)
 

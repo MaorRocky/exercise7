@@ -63,7 +63,7 @@ extension CompetitionsViewController: UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
 
-        guard let cell = tableView.cellForRow(at: indexPath) else
+        guard let cell: UITableViewCell = tableView.cellForRow(at: indexPath) else
         {
             return
         }

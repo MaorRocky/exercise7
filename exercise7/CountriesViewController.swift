@@ -48,6 +48,7 @@ class CountriesViewController: UIViewController
     }
 
 
+
     @objc private func goBackButton()
     {
         self.navigationController?.popViewController(animated: true)
@@ -57,11 +58,11 @@ class CountriesViewController: UIViewController
 
     func getCountryData(CountryName str: String) -> CountryData?
     {
-        for conutry in countriesArray
+        for country: CountryData in countriesArray
         {
-            if conutry.Country == str
+            if country.Country == str
             {
-                return conutry
+                return country
             }
         }
         return nil
@@ -128,7 +129,7 @@ extension CountriesViewController: UITableViewDataSource
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = self.countriesArray[indexPath.row].Country
         return cell
     }

@@ -13,7 +13,7 @@ class SportTypeViewController: UIViewController
     let tableView = UITableView()
 
 
-    var sportTypesArray = ["Soccer", "Basketball", "Hockey"]
+    var sportTypesArray: [String] = ["Soccer", "Basketball", "Hockey"]
 
     let IsraelData: CountryData = CountryData(Country: "Israel", SportTypeToCountryLeaguesDict: ["Soccer": ["Premier League", "National League", "Division 3"],
                                                                                                  "Basketball": ["Winner League", "All Star", "National League"]])
@@ -53,7 +53,7 @@ extension SportTypeViewController: UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
 
-        guard let cell = tableView.cellForRow(at: indexPath) else
+        guard let cell: UITableViewCell = tableView.cellForRow(at: indexPath) else
         {
             return
         }
@@ -109,7 +109,7 @@ extension SportTypeViewController: UITableViewDataSource
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = self.sportTypesArray[indexPath.row]
         return cell
     }
